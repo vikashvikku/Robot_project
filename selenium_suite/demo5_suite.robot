@@ -19,3 +19,5 @@ TC1
     Input Text    id=getInTouchEmpCount    24
     Element Text Should Be    locator=xpath=//div[contains(@class,'text-red-600 ml-2')]   expected=Mobile Number should be 10 digits
     Click Element    xpath=//button[(@type='submit')]
+    Close Window
+    Close Browser
