@@ -1,103 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.0 on win32)" generated="20220506 11:59:09.434" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo5 Suite" source="C:\Users\Hiiii\Desktop\Robot\Robot_project\selenium_suite\demo5_suite.robot">
-<test id="s1-t1" name="TC1" line="7">
+<robot generator="Robot 5.0 (Python 3.10.0 on win32)" generated="20220506 14:10:02.424" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo6 Suite" source="C:\Users\Hiiii\Desktop\Robot\Robot_project\selenium_suite\demo6_suite.robot">
+<test id="s1-t1" name="TC1" line="6">
 <kw name="Append To Environment Variable" library="OperatingSystem">
 <arg>Path</arg>
 <arg>C:\\Users\\Hiiii\\Desktop\\LTTS\\Drivers</arg>
 <doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220506 11:59:10.494" level="INFO">Environment variable 'Path' set to value 'C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Program Files\Amazon Corretto\jdk11.0.12_7\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\msys64\mingw64\bin;C;C:\Program Files\Git\cmd;C:\Users\Hiiii\AppData\Roaming\Python\Python310\Scripts;C:\Users\Hiiii\AppData\Local\Microsoft\WindowsApps;;C:\Users\Hiiii\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Hiiii\Desktop\LTTS\Drivers'.</msg>
-<status status="PASS" starttime="20220506 11:59:10.494" endtime="20220506 11:59:10.494"/>
+<msg timestamp="20220506 14:10:02.955" level="INFO">Environment variable 'Path' set to value 'C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Program Files\Amazon Corretto\jdk11.0.12_7\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\msys64\mingw64\bin;C;C:\Program Files\Git\cmd;C:\Users\Hiiii\AppData\Roaming\Python\Python310\Scripts;C:\Users\Hiiii\AppData\Local\Microsoft\WindowsApps;;C:\Users\Hiiii\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Hiiii\Desktop\LTTS\Drivers'.</msg>
+<status status="PASS" starttime="20220506 14:10:02.955" endtime="20220506 14:10:02.955"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>url=https://www.medibuddy.in/</arg>
+<arg>url=https://www.db4free.net/</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220506 11:59:10.497" level="INFO">Opening browser 'chrome' to base url 'https://www.medibuddy.in/'.</msg>
-<status status="PASS" starttime="20220506 11:59:10.496" endtime="20220506 11:59:18.076"/>
+<msg timestamp="20220506 14:10:02.955" level="INFO">Opening browser 'chrome' to base url 'https://www.db4free.net/'.</msg>
+<status status="PASS" starttime="20220506 14:10:02.955" endtime="20220506 14:10:08.907"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220506 11:59:18.081" endtime="20220506 11:59:19.437"/>
+<status status="PASS" starttime="20220506 14:10:08.908" endtime="20220506 14:10:09.046"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220506 11:59:19.450" endtime="20220506 11:59:19.453"/>
+<status status="PASS" starttime="20220506 14:10:09.046" endtime="20220506 14:10:09.046"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>id=wzrk-cancel</arg>
+<arg>link=phpMyAdmin »</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220506 11:59:19.455" level="INFO">Clicking element 'id=wzrk-cancel'.</msg>
-<status status="PASS" starttime="20220506 11:59:19.454" endtime="20220506 11:59:28.601"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>link=For Employer</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220506 11:59:28.603" level="INFO">Clicking element 'link=For Employer'.</msg>
-<status status="PASS" starttime="20220506 11:59:28.602" endtime="20220506 11:59:29.055"/>
+<msg timestamp="20220506 14:10:09.046" level="INFO">Clicking element 'link=phpMyAdmin »'.</msg>
+<status status="PASS" starttime="20220506 14:10:09.046" endtime="20220506 14:10:09.230"/>
 </kw>
 <kw name="Switch Window" library="SeleniumLibrary">
-<arg>MediBuddy LaunchPad</arg>
+<arg>phpMyAdmin</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220506 11:59:29.056" endtime="20220506 11:59:34.459"/>
+<status status="PASS" starttime="20220506 14:10:09.231" endtime="20220506 14:10:18.915"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=getInTouchName</arg>
-<arg>Vikash</arg>
+<arg>id=input_username</arg>
+<arg>admin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220506 11:59:34.461" level="INFO">Typing text 'Vikash' into text field 'id=getInTouchName'.</msg>
-<status status="PASS" starttime="20220506 11:59:34.460" endtime="20220506 11:59:34.839"/>
+<msg timestamp="20220506 14:10:18.915" level="INFO">Typing text 'admin' into text field 'id=input_username'.</msg>
+<status status="PASS" starttime="20220506 14:10:18.915" endtime="20220506 14:10:19.098"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=getInTouchEmail</arg>
-<arg>vikash7730@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220506 11:59:34.842" level="INFO">Typing text 'vikash7730@gmail.com' into text field 'id=getInTouchEmail'.</msg>
-<status status="PASS" starttime="20220506 11:59:34.840" endtime="20220506 11:59:35.577"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=getInTouchMobile</arg>
-<arg>99009</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220506 11:59:35.579" level="INFO">Typing text '99009' into text field 'id=getInTouchMobile'.</msg>
-<status status="PASS" starttime="20220506 11:59:35.579" endtime="20220506 11:59:35.929"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=getInTouchDesignation</arg>
-<arg>Intern</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220506 11:59:35.935" level="INFO">Typing text 'Intern' into text field 'id=getInTouchDesignation'.</msg>
-<status status="PASS" starttime="20220506 11:59:35.930" endtime="20220506 11:59:36.235"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=getInTouchEmpCount</arg>
-<arg>24</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220506 11:59:36.238" level="INFO">Typing text '24' into text field 'id=getInTouchEmpCount'.</msg>
-<status status="PASS" starttime="20220506 11:59:36.237" endtime="20220506 11:59:36.545"/>
-</kw>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<arg>locator=xpath=//div[contains(@class,'text-red-600 ml-2')]</arg>
-<arg>expected=Mobile Number should be 10 digits</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20220506 11:59:36.546" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
-<msg timestamp="20220506 11:59:36.757" level="INFO">Verifying element 'xpath=//div[contains(@class,'text-red-600 ml-2')]' contains exact text 'Mobile Number should be 10 digits'.</msg>
-<status status="PASS" starttime="20220506 11:59:36.546" endtime="20220506 11:59:36.938"/>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=input_password</arg>
+<arg>admin123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220506 14:10:19.098" level="INFO">Typing password into text field 'id=input_password'.</msg>
+<msg timestamp="20220506 14:10:19.176" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220506 14:10:19.297" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220506 14:10:19.098" endtime="20220506 14:10:19.297"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//button[(@type='submit')]</arg>
+<arg>id=input_go</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220506 11:59:36.940" level="INFO">Clicking element 'xpath=//button[(@type='submit')]'.</msg>
-<status status="PASS" starttime="20220506 11:59:36.939" endtime="20220506 11:59:37.161"/>
+<msg timestamp="20220506 14:10:19.300" level="INFO">Clicking element 'id=input_go'.</msg>
+<status status="PASS" starttime="20220506 14:10:19.299" endtime="20220506 14:10:20.605"/>
 </kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220506 11:59:37.163" endtime="20220506 11:59:40.424"/>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath=(//div[(@class='alert alert-danger')])[3]</arg>
+<arg>expected=Error 1045: Access denied for user. Additional error information may be available, but is being hidden by the $cfg['Servers'][$i]['hide_connection_errors'] configuration directive.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220506 14:10:20.607" level="INFO">Verifying element 'xpath=(//div[(@class='alert alert-danger')])[3]' contains exact text 'Error 1045: Access denied for user. Additional error information may be available, but is being hidden by the $cfg['Servers'][$i]['hide_connection_errors'] configuration directive.'.</msg>
+<status status="PASS" starttime="20220506 14:10:20.606" endtime="20220506 14:10:20.662"/>
 </kw>
-<status status="PASS" starttime="20220506 11:59:10.492" endtime="20220506 11:59:40.441"/>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=(//div[(@class='alert alert-danger')])[3]</arg>
+<arg>Access denied for user.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220506 14:10:20.690" level="INFO">Element 'xpath=(//div[(@class='alert alert-danger')])[3]' contains text 'Access denied for user.'.</msg>
+<status status="PASS" starttime="20220506 14:10:20.663" endtime="20220506 14:10:20.690"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20220506 14:10:20.691" endtime="20220506 14:10:20.733"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220506 14:10:20.735" endtime="20220506 14:10:23.589"/>
+</kw>
+<status status="PASS" starttime="20220506 14:10:02.955" endtime="20220506 14:10:23.589"/>
 </test>
-<status status="PASS" starttime="20220506 11:59:09.445" endtime="20220506 11:59:40.444"/>
+<status status="PASS" starttime="20220506 14:10:02.424" endtime="20220506 14:10:23.589"/>
 </suite>
 <statistics>
 <total>
@@ -106,10 +91,9 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo5 Suite">Demo5 Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo6 Suite">Demo6 Suite</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220506 11:59:36.546" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
 </errors>
 </robot>
