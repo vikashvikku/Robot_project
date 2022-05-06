@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.0 on win32)" generated="20220504 17:19:33.676" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo2 Suite" source="C:\Users\Hiiii\Desktop\Robot\Robot_project\robot_suite\demo2_suite.robot">
+<test id="s1-t1" name="TC1" line="4">
+<kw name="Create Directory" library="OperatingSystem">
+<arg>path=F:\\line\\Mine\Demo1</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20220504 17:19:33.736" level="INFO" html="true">Directory '&lt;a href="file://F:\line\MineDemo1"&gt;F:\line\MineDemo1&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20220504 17:19:33.736" endtime="20220504 17:19:33.736"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>path=F:\\Hello.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20220504 17:19:33.741" level="INFO" html="true">Created file '&lt;a href="file://F:\Hello.txt"&gt;F:\Hello.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220504 17:19:33.739" endtime="20220504 17:19:33.741"/>
+</kw>
+<status status="PASS" starttime="20220504 17:19:33.736" endtime="20220504 17:19:33.742"/>
+</test>
+<test id="s1-t2" name="TC2" line="8">
+<kw name="Remove File" library="OperatingSystem">
+<arg>path=F:\\Hello.txt</arg>
+<doc>Removes a file with the given path.</doc>
+<msg timestamp="20220504 17:19:33.745" level="INFO" html="true">Removed file '&lt;a href="file://F:\Hello.txt"&gt;F:\Hello.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220504 17:19:33.744" endtime="20220504 17:19:33.745"/>
+</kw>
+<status status="PASS" starttime="20220504 17:19:33.744" endtime="20220504 17:19:33.746"/>
+</test>
+<test id="s1-t3" name="TC3" line="11">
+<kw name="Remove Directory" library="OperatingSystem">
+<arg>path=F:\\GO</arg>
+<doc>Removes the directory pointed to by the given ``path``.</doc>
+<msg timestamp="20220504 17:19:33.749" level="INFO" html="true">Directory '&lt;a href="file://F:\GO"&gt;F:\GO&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20220504 17:19:33.749" endtime="20220504 17:19:33.749"/>
+</kw>
+<kw name="Remove Directory" library="OperatingSystem">
+<arg>path=F:\\line\\Mine\Demo1</arg>
+<doc>Removes the directory pointed to by the given ``path``.</doc>
+<msg timestamp="20220504 17:19:33.751" level="INFO" html="true">Listing contents of directory '&lt;a href="file://F:\line\MineDemo1"&gt;F:\line\MineDemo1&lt;/a&gt;'.</msg>
+<msg timestamp="20220504 17:19:33.752" level="INFO" html="true">Directory '&lt;a href="file://F:\line\MineDemo1"&gt;F:\line\MineDemo1&lt;/a&gt;' is empty.</msg>
+<msg timestamp="20220504 17:19:33.752" level="INFO" html="true">Removed directory '&lt;a href="file://F:\line\MineDemo1"&gt;F:\line\MineDemo1&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220504 17:19:33.751" endtime="20220504 17:19:33.752"/>
+</kw>
+<status status="PASS" starttime="20220504 17:19:33.748" endtime="20220504 17:19:33.752"/>
+</test>
+<status status="PASS" starttime="20220504 17:19:33.679" endtime="20220504 17:19:33.754"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Demo2 Suite">Demo2 Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

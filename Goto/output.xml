@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.0 on win32)" generated="20220505 16:48:11.953" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo3 Suite" source="C:\Users\Hiiii\Desktop\Robot\Robot_project\Goto\demo3_suite.robot">
+<test id="s1-t1" name="TC1" line="7">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<arg>Path</arg>
+<arg>C:\\Users\\Hiiii\\Desktop\\LTTS\\Drivers</arg>
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<msg timestamp="20220505 16:48:12.544" level="INFO">Environment variable 'Path' set to value 'C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Program Files\Amazon Corretto\jdk11.0.12_7\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\msys64\mingw64\bin;C;C:\Program Files\Git\cmd;C:\Users\Hiiii\AppData\Roaming\Python\Python310\Scripts;C:\Users\Hiiii\AppData\Local\Microsoft\WindowsApps;;C:\Users\Hiiii\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Hiiii\Desktop\LTTS\Drivers'.</msg>
+<status status="PASS" starttime="20220505 16:48:12.544" endtime="20220505 16:48:12.544"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://www.goto.com/meeting/</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220505 16:48:12.545" level="INFO">Opening browser 'chrome' to base url 'https://www.goto.com/meeting/'.</msg>
+<status status="PASS" starttime="20220505 16:48:12.545" endtime="20220505 16:48:21.590"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220505 16:48:21.599" endtime="20220505 16:48:21.951"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=truste-consent-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220505 16:48:21.951" level="INFO">Clicking element 'id=truste-consent-button'.</msg>
+<status status="PASS" starttime="20220505 16:48:21.951" endtime="20220505 16:48:22.438"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Try Free</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220505 16:48:22.440" level="INFO">Clicking element 'link=Try Free'.</msg>
+<status status="PASS" starttime="20220505 16:48:22.439" endtime="20220505 16:48:25.575"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Id=first-name</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220505 16:48:25.581" level="INFO">Typing text 'John' into text field 'Id=first-name'.</msg>
+<status status="PASS" starttime="20220505 16:48:25.580" endtime="20220505 16:48:26.105"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Id=last-name</arg>
+<arg>wick</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220505 16:48:26.107" level="INFO">Typing text 'wick' into text field 'Id=last-name'.</msg>
+<status status="PASS" starttime="20220505 16:48:26.106" endtime="20220505 16:48:26.373"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Id=login__email</arg>
+<arg>john@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220505 16:48:26.374" level="INFO">Typing text 'john@gmail.com' into text field 'Id=login__email'.</msg>
+<status status="PASS" starttime="20220505 16:48:26.374" endtime="20220505 16:48:26.669"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>Id=login__password</arg>
+<arg>welcome123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220505 16:48:26.671" level="INFO">Typing password into text field 'Id=login__password'.</msg>
+<msg timestamp="20220505 16:48:26.745" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220505 16:48:26.935" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220505 16:48:26.670" endtime="20220505 16:48:26.935"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>id=CompanySize</arg>
+<arg>10 - 99</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220505 16:48:26.941" level="INFO">Selecting options from selection list 'id=CompanySize' by label 10 - 99.</msg>
+<status status="PASS" starttime="20220505 16:48:26.940" endtime="20220505 16:48:27.097"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[text()='Start My Trial']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220505 16:48:27.099" level="INFO">Clicking element 'xpath=//button[text()='Start My Trial']'.</msg>
+<status status="PASS" starttime="20220505 16:48:27.098" endtime="20220505 16:48:27.340"/>
+</kw>
+<status status="PASS" starttime="20220505 16:48:12.542" endtime="20220505 16:48:27.340"/>
+</test>
+<status status="PASS" starttime="20220505 16:48:11.956" endtime="20220505 16:48:27.343"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo3 Suite">Demo3 Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

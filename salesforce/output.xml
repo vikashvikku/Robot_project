@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.0 on win32)" generated="20220506 09:42:13.321" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo4 Suite" source="C:\Users\Hiiii\Desktop\Robot\Robot_project\salesforce\demo4_suite.robot">
+<test id="s1-t1" name="TC1" line="7">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<arg>Path</arg>
+<arg>C:\\Users\\Hiiii\\Desktop\\LTTS\\Drivers</arg>
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<msg timestamp="20220506 09:42:14.242" level="INFO">Environment variable 'Path' set to value 'C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Program Files\Amazon Corretto\jdk11.0.12_7\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\msys64\mingw64\bin;C;C:\Program Files\Git\cmd;C:\Users\Hiiii\AppData\Roaming\Python\Python310\Scripts;C:\Users\Hiiii\AppData\Local\Microsoft\WindowsApps;;C:\Users\Hiiii\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Hiiii\Desktop\LTTS\Drivers'.</msg>
+<status status="PASS" starttime="20220506 09:42:14.242" endtime="20220506 09:42:14.242"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220506 09:42:14.244" level="INFO">Opening browser 'firefox' to base url 'chrome'.</msg>
+<msg timestamp="20220506 09:42:14.270" level="INFO">Firefox driver log is always forced to to: C:\Users\Hiiii\Desktop\Robot\Robot_project\salesforce\geckodriver-1.log</msg>
+<msg timestamp="20220506 09:42:14.316" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220506 09:42:14.320" level="FAIL">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</msg>
+<status status="FAIL" starttime="20220506 09:42:14.243" endtime="20220506 09:42:14.477"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220506 09:42:14.479" endtime="20220506 09:42:14.479"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=UserFirstName</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220506 09:42:14.479" endtime="20220506 09:42:14.479"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=UserLastName</arg>
+<arg>Wick</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220506 09:42:14.481" endtime="20220506 09:42:14.481"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=UserEmail</arg>
+<arg>john@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220506 09:42:14.482" endtime="20220506 09:42:14.482"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name=UserTitle</arg>
+<arg>IT Manager</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" starttime="20220506 09:42:14.483" endtime="20220506 09:42:14.483"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=CompanyName</arg>
+<arg>LTTS</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220506 09:42:14.484" endtime="20220506 09:42:14.485"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name=CompanyEmployees</arg>
+<arg>101 - 500 employees</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" starttime="20220506 09:42:14.485" endtime="20220506 09:42:14.485"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class='checkbox-ui']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220506 09:42:14.486" endtime="20220506 09:42:14.487"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name=start my free trial</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220506 09:42:14.488" endtime="20220506 09:42:14.488"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>locator=xpath=//span[contains(@id,'UserPhone')]</arg>
+<arg>expected=Enter a valid phone number</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20220506 09:42:14.489" endtime="20220506 09:42:14.489"/>
+</kw>
+<status status="FAIL" starttime="20220506 09:42:14.239" endtime="20220506 09:42:14.491">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<status status="FAIL" starttime="20220506 09:42:13.335" endtime="20220506 09:42:14.496"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo4 Suite">Demo4 Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
