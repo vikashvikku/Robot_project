@@ -15,5 +15,17 @@ TC1
     Switch Window   OpenEMR
     # Select Frame    xpath=//div[(@text()='Messages')]
     Click Element    xpath=//div[(text()='Messages')]
-    Click Element    xpath=//div[(@class,'btn btn-primary btn-add')]
+#    Click Element    xpath=//div[(@class,'btn btn-primary btn-add')]
+    Select Frame    xpath=//iframe[(@name='msg')]
+    Click Element    partial link=Add New
+    Select From List By Label    id=form_note_type      Pharmacy
+    Select From List By Label    id=form_message_status     New
+    Select From List By Index    id=users   1
+    Input Text    id=note    Hello
+    Click Element    id=newnote
+    Element Should Contain    id=error_reply_to    expected=Please choose a patient
+    Unselect Frame
+    Close Browser
+
+
 
