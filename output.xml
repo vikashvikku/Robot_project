@@ -1,134 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.0 on win32)" generated="20220507 09:52:05.621" rpa="false" schemaversion="3">
-<suite id="s1" name="demo9 Task suite" source="C:\Users\Hiiii\Desktop\Robot\Robot_project\selenium_suite\demo9_Task_suite.robot">
-<test id="s1-t1" name="TC1" line="6">
-<kw name="Append To Environment Variable" library="OperatingSystem">
-<arg>Path</arg>
-<arg>C:\\Users\\Hiiii\\Desktop\\LTTS\\Drivers</arg>
-<doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220507 09:52:06.127" level="INFO">Environment variable 'Path' set to value 'C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Program Files\Amazon Corretto\jdk11.0.12_7\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\msys64\mingw64\bin;C;C:\Program Files\Git\cmd;C:\Users\Hiiii\AppData\Roaming\Python\Python310\Scripts;C:\Users\Hiiii\AppData\Local\Microsoft\WindowsApps;;C:\Users\Hiiii\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Hiiii\Desktop\LTTS\Drivers'.</msg>
-<status status="PASS" starttime="20220507 09:52:06.127" endtime="20220507 09:52:06.127"/>
+<robot generator="Robot 5.0 (Python 3.10.0 on win32)" generated="20220507 11:18:38.124" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo2" source="C:\Users\Hiiii\Desktop\Robot\Robot_project\db_suite\demo2.robot">
+<test id="s1-t1" name="TC2" line="14">
+<kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
+<arg>dbapiModuleName=pymysql</arg>
+<arg>dbName=dbfree_db</arg>
+<arg>dbUsername=dbfree_db</arg>
+<arg>dbPassword=12345678</arg>
+<arg>dbHost=db4free.net</arg>
+<arg>dbPort=3306</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<msg timestamp="20220507 11:18:38.287" level="INFO">Connecting using : pymysql.connect(db=dbfree_db, user=dbfree_db, passwd=12345678, host=db4free.net, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20220507 11:18:38.194" endtime="20220507 11:18:47.938"/>
 </kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>url=https://demo.openemr.io/b/openemr</arg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220507 09:52:06.129" level="INFO">Opening browser 'chrome' to base url 'https://demo.openemr.io/b/openemr'.</msg>
-<status status="PASS" starttime="20220507 09:52:06.128" endtime="20220507 09:52:25.253"/>
+<kw name="Table Must Exist" library="DatabaseLibrary">
+<arg>Products</arg>
+<doc>Check if the table given exists in the database. Set optional input `sansTran` to True to run command without an
+explicit transaction commit or rollback.</doc>
+<msg timestamp="20220507 11:18:47.948" level="INFO">Executing : Table Must Exist  |  Products </msg>
+<msg timestamp="20220507 11:18:47.948" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='Products' </msg>
+<status status="PASS" starttime="20220507 11:18:47.947" endtime="20220507 11:18:54.322"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220507 09:52:25.256" endtime="20220507 09:52:25.428"/>
+<kw name="Row Count Is Equal To X" library="DatabaseLibrary">
+<arg>select * from Products</arg>
+<arg>81</arg>
+<doc>Check if the number of rows returned from `selectStatement` is equal to the value submitted. If not, then this
+will throw an AssertionError. Set optional input `sansTran` to True to run command without an explicit
+transaction commit or rollback.</doc>
+<msg timestamp="20220507 11:18:54.332" level="INFO">Executing : Row Count Is Equal To X  |  select * from Products  |  81 </msg>
+<msg timestamp="20220507 11:18:54.332" level="INFO">Executing : Row Count  |  select * from Products </msg>
+<status status="PASS" starttime="20220507 11:18:54.332" endtime="20220507 11:18:57.648"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>30s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220507 09:52:25.431" endtime="20220507 09:52:25.437"/>
+<kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
+<doc>Disconnects from the database.</doc>
+<msg timestamp="20220507 11:18:57.660" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20220507 11:18:57.660" endtime="20220507 11:18:57.660"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=authUser</arg>
-<arg>admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220507 09:52:25.445" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
-<status status="PASS" starttime="20220507 09:52:25.444" endtime="20220507 09:52:25.629"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=clearPass</arg>
-<arg>pass</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220507 09:52:25.629" level="INFO">Typing password into text field 'id=clearPass'.</msg>
-<msg timestamp="20220507 09:52:25.700" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220507 09:52:25.808" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220507 09:52:25.629" endtime="20220507 09:52:25.809"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>name=languageChoice</arg>
-<arg>English (Indian)</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220507 09:52:25.810" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
-<status status="PASS" starttime="20220507 09:52:25.809" endtime="20220507 09:52:25.962"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=login-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220507 09:52:25.963" level="INFO">Clicking element 'id=login-button'.</msg>
-<status status="PASS" starttime="20220507 09:52:25.963" endtime="20220507 09:52:33.280"/>
-</kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>OpenEMR</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220507 09:52:33.281" endtime="20220507 09:52:33.323"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//div[(text()='Messages')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220507 09:52:33.323" level="INFO">Clicking element 'xpath=//div[(text()='Messages')]'.</msg>
-<status status="PASS" starttime="20220507 09:52:33.323" endtime="20220507 09:52:33.454"/>
-</kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>xpath=//iframe[(@name='msg')]</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220507 09:52:33.457" level="INFO">Selecting frame 'xpath=//iframe[(@name='msg')]'.</msg>
-<status status="PASS" starttime="20220507 09:52:33.455" endtime="20220507 09:52:34.870"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>partial link=Add New</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220507 09:52:34.878" level="INFO">Clicking element 'partial link=Add New'.</msg>
-<status status="PASS" starttime="20220507 09:52:34.876" endtime="20220507 09:52:36.395"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>id=form_note_type</arg>
-<arg>Pharmacy</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220507 09:52:36.395" level="INFO">Selecting options from selection list 'id=form_note_type' by label Pharmacy.</msg>
-<status status="PASS" starttime="20220507 09:52:36.395" endtime="20220507 09:52:36.515"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>id=form_message_status</arg>
-<arg>New</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220507 09:52:36.516" level="INFO">Selecting options from selection list 'id=form_message_status' by label New.</msg>
-<status status="PASS" starttime="20220507 09:52:36.516" endtime="20220507 09:52:36.592"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>id=users</arg>
-<arg>1</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20220507 09:52:36.593" level="INFO">Selecting options from selection list 'id=users' by index 1.</msg>
-<status status="PASS" starttime="20220507 09:52:36.593" endtime="20220507 09:52:36.749"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=note</arg>
-<arg>Hello</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220507 09:52:36.750" level="INFO">Typing text 'Hello' into text field 'id=note'.</msg>
-<status status="PASS" starttime="20220507 09:52:36.750" endtime="20220507 09:52:36.903"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=newnote</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220507 09:52:36.904" level="INFO">Clicking element 'id=newnote'.</msg>
-<status status="PASS" starttime="20220507 09:52:36.904" endtime="20220507 09:52:37.051"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>id=error_reply_to</arg>
-<arg>expected=Please choose a patient</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220507 09:52:37.100" level="INFO">Element 'id=error_reply_to' contains text 'Please choose a patient'.</msg>
-<status status="PASS" starttime="20220507 09:52:37.053" endtime="20220507 09:52:37.101"/>
-</kw>
-<kw name="Unselect Frame" library="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20220507 09:52:37.101" endtime="20220507 09:52:37.106"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220507 09:52:37.108" endtime="20220507 09:52:39.414"/>
-</kw>
-<status status="PASS" starttime="20220507 09:52:06.125" endtime="20220507 09:52:39.418"/>
+<status status="PASS" starttime="20220507 11:18:38.193" endtime="20220507 11:18:57.665"/>
 </test>
-<status status="PASS" starttime="20220507 09:52:05.625" endtime="20220507 09:52:39.425"/>
+<status status="PASS" starttime="20220507 11:18:38.127" endtime="20220507 11:18:57.673"/>
 </suite>
 <statistics>
 <total>
@@ -137,7 +48,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="demo9 Task suite">demo9 Task suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo2">Demo2</stat>
 </suite>
 </statistics>
 <errors>
