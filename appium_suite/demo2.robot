@@ -7,7 +7,7 @@ TC1
     Open Application    remote_url=http://hub-cloud.browserstack.com/wd/hub
     ...     browserstack.user=vikashkumar_7phJy4
     ...     browserstack.key=dSB8JBuG6cCc98iHQrUo
-    ...     app="bs://15459b197aa3bdc71b9a84d61e7d18c62f206f55"
+    ...     app="bs://80bc8a30dfff530813b873b7d9183a0f97b446ac"
     ...     device=Google Pixel 3
     ...     os_version=9.0
     ...     project=lt6_project
@@ -16,6 +16,7 @@ TC1
 
     ${app_source}       Get Source
     Log   ${app_source}
+    Click Element    xpath=//*[(@text='Deny')]
 
     Close Application
 
