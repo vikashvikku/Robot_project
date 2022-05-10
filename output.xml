@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.0 on win32)" generated="20220507 17:05:26.493" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.0 on win32)" generated="20220509 14:11:21.675" rpa="false" schemaversion="3">
 <suite id="s1" name="Demo2" source="C:\Users\Hiiii\Desktop\Robot\Robot_project\appium_suite\demo2.robot">
 <test id="s1-t1" name="TC1" line="6">
 <kw name="Open Application" library="AppiumLibrary">
@@ -18,74 +18,51 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20220507 17:05:27.341" endtime="20220507 17:05:55.722"/>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220509 14:11:23.507" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220509 14:11:23.504" endtime="20220509 14:11:23.518"/>
+</kw>
+<msg timestamp="20220509 14:11:23.518" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220509 14:11:23.528" level="FAIL">WebDriverException: Message: App Automate testing time has expired. Contact BrowserStack Support at https://www.browserstack.com/contact for extending your Free Trial.
+</msg>
+<status status="FAIL" starttime="20220509 14:11:22.173" endtime="20220509 14:11:23.531"/>
 </kw>
 <kw name="Get Source" library="AppiumLibrary">
 <var>${app_source}</var>
 <doc>Returns the entire source of the current page.</doc>
-<msg timestamp="20220507 17:05:56.635" level="INFO">${app_source} = &lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
-&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2028"&gt;
-  &lt;android.widget.FrameLayout index="0" package="com.google.a...</msg>
-<status status="PASS" starttime="20220507 17:05:55.730" endtime="20220507 17:05:56.635"/>
+<status status="NOT RUN" starttime="20220509 14:11:23.532" endtime="20220509 14:11:23.532"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${app_source}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220507 17:05:56.638" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
-&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2028"&gt;
-  &lt;android.widget.FrameLayout index="0" package="com.google.android.packageinstaller" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[100,66][980,2027]" displayed="true"&gt;
-    &lt;android.widget.FrameLayout index="0" package="com.google.android.packageinstaller" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[100,66][980,2027]" displayed="true"&gt;
-      &lt;android.widget.FrameLayout index="0" package="com.google.android.packageinstaller" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[100,66][980,2027]" displayed="true"&gt;
-        &lt;android.view.ViewGroup index="0" package="com.google.android.packageinstaller" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[100,66][980,2027]" displayed="true"&gt;
-          &lt;android.widget.ScrollView index="0" package="com.google.android.packageinstaller" class="android.widget.ScrollView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,844][936,1250]" displayed="true"&gt;
-            &lt;android.widget.LinearLayout index="0" package="com.google.android.packageinstaller" class="android.widget.LinearLayout" text="" resource-id="com.android.packageinstaller:id/dialog_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,844][936,1250]" displayed="true"&gt;
-              &lt;android.widget.FrameLayout index="0" package="com.google.android.packageinstaller" class="android.widget.FrameLayout" text="" resource-id="com.android.packageinstaller:id/desc_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,844][936,1096]" displayed="true"&gt;
-                &lt;android.widget.LinearLayout index="0" package="com.google.android.packageinstaller" class="android.widget.LinearLayout" text="" resource-id="com.android.packageinstaller:id/perm_desc_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[199,894][892,1096]" displayed="true"&gt;
-                  &lt;android.widget.ImageView index="0" package="com.google.android.packageinstaller" class="android.widget.ImageView" text="" resource-id="com.android.packageinstaller:id/permission_icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[199,894][298,993]" displayed="true" /&gt;
-                  &lt;android.widget.TextView index="1" package="com.google.android.packageinstaller" class="android.widget.TextView" text="Allow Zomato to access this device's location?" resource-id="com.android.packageinstaller:id/permission_message" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[298,894][892,1096]" displayed="true" /&gt;
-                &lt;/android.widget.LinearLayout&gt;
-              &lt;/android.widget.FrameLayout&gt;
-              &lt;android.widget.LinearLayout index="1" package="com.google.android.packageinstaller" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,1096][936,1250]" displayed="true"&gt;
-                &lt;android.widget.LinearLayout index="0" package="com.google.android.packageinstaller" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[199,1096][892,1250]" displayed="true"&gt;
-                  &lt;android.widget.LinearLayout index="0" package="com.google.android.packageinstaller" class="android.widget.LinearLayout" text="" resource-id="com.android.packageinstaller:id/button_group" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[216,1107][892,1239]" displayed="true"&gt;
-                    &lt;android.widget.Button index="0" package="com.google.android.packageinstaller" class="android.widget.Button" text="Deny" resource-id="com.android.packageinstaller:id/permission_deny_button" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[540,1107][716,1239]" displayed="true" /&gt;
-                    &lt;android.widget.Button index="1" package="com.google.android.packageinstaller" class="android.widget.Button" text="Allow" resource-id="com.android.packageinstaller:id/permission_allow_button" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[716,1107][892,1239]" displayed="true" /&gt;
-                  &lt;/android.widget.LinearLayout&gt;
-                &lt;/android.widget.LinearLayout&gt;
-              &lt;/android.widget.LinearLayout&gt;
-            &lt;/android.widget.LinearLayout&gt;
-          &lt;/android.widget.ScrollView&gt;
-        &lt;/android.view.ViewGroup&gt;
-      &lt;/android.widget.FrameLayout&gt;
-    &lt;/android.widget.FrameLayout&gt;
-  &lt;/android.widget.FrameLayout&gt;
-&lt;/hierarchy&gt;</msg>
-<status status="PASS" starttime="20220507 17:05:56.637" endtime="20220507 17:05:56.639"/>
+<status status="NOT RUN" starttime="20220509 14:11:23.533" endtime="20220509 14:11:23.533"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>xpath=//*[(@text='Deny')]</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220507 17:05:56.640" level="INFO">Clicking element 'xpath=//*[(@text='Deny')]'.</msg>
-<status status="PASS" starttime="20220507 17:05:56.640" endtime="20220507 17:05:57.552"/>
+<status status="NOT RUN" starttime="20220509 14:11:23.534" endtime="20220509 14:11:23.534"/>
 </kw>
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20220507 17:05:57.556" endtime="20220507 17:05:59.094"/>
+<status status="NOT RUN" starttime="20220509 14:11:23.535" endtime="20220509 14:11:23.535"/>
 </kw>
-<status status="PASS" starttime="20220507 17:05:27.341" endtime="20220507 17:05:59.095"/>
+<status status="FAIL" starttime="20220509 14:11:22.172" endtime="20220509 14:11:23.536">WebDriverException: Message: App Automate testing time has expired. Contact BrowserStack Support at https://www.browserstack.com/contact for extending your Free Trial.
+</status>
 </test>
-<status status="PASS" starttime="20220507 17:05:26.497" endtime="20220507 17:05:59.099"/>
+<status status="FAIL" starttime="20220509 14:11:21.678" endtime="20220509 14:11:23.538"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo2">Demo2</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo2">Demo2</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220509 14:11:23.518" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>

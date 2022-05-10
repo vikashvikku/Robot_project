@@ -20,18 +20,6 @@ TC1
 
     Wait Until Page Contains Element    xpath=//*[(@text='Dismiss')]      50s
     Click Element    xpath=//*[(@text='Dismiss')]
-    Wait Until Page Contains Element    xpath=//*[(@text='Sign in')]      50s
-    Click Element    xpath=//*[@text='Sign in']
-    Wait Until Page Contains Element    xpath=//*[(@text='Sign in')]      50s
-    Click Element    xpath=//*[@text='Sign in']
-    Input Text    xpath=//*[(@text='Enter an e-mail address or username')]      Vikash@gmail.com
-    Input Password    xpath=//*[(@text='Password')]    welcome123
-    Click Element    xpath=(//*[@text='Sign in'])[2]
-    
-    Element Should Contain Text    xpath=//*[@text='There was an issue signing in']      There was an issue signing in
-
-
-    # Close Application
-
-
+    Wait Until Page Contains Element    xpath=//*[@content-desc='Settings']
+    Click Element    xpath=//*[@content-desc='Settings']
 
